@@ -176,9 +176,7 @@ function Field({
     <label className={FIELD_WRAPPER} htmlFor={id}>
       {FieldIcon && <FieldIcon className="mt-0.5 size-5 shrink-0 text-white" />}
       <div className="flex w-full flex-col">
-        <span className="mb-1 font-editorial font-medium text-[14px] text-white">
-          {label}
-        </span>
+        <span className="mb-1 font-editorial font-medium text-[14px] text-white">{label}</span>
         {options ? (
           <div className="relative w-full">
             <select
@@ -268,10 +266,7 @@ export function Contact() {
   };
 
   return (
-    <section
-      className="bg-white px-6 py-16 sm:px-8 lg:pt-[80px] lg:pb-[120px]"
-      id="contact"
-    >
+    <section className="bg-white px-6 py-16 sm:px-8 lg:pt-[80px] lg:pb-[120px]" id="contact">
       {/* Container slightly wider if needed, grid handles two columns */}
       <div className="mx-auto grid max-w-[1380px] gap-x-[43px] gap-y-16 lg:grid-cols-[1fr_1.1fr]">
         {/* Left Column */}
@@ -291,10 +286,9 @@ export function Contact() {
           </h2>
 
           <p className="mt-6 font-editorial text-[17px] leading-[1.6] text-graphite/80 max-w-[480px]">
-            Whether you need the world&rsquo;s finest raw hing at scale, a
-            white-label partner who thinks like an owner, or a research
-            collaborator on the future of this ingredient, this is where it
-            begins.
+            Whether you need the world&rsquo;s finest raw hing at scale, a white-label partner who
+            thinks like an owner, or a research collaborator on the future of this ingredient, this
+            is where it begins.
           </p>
 
           {/* Three Feature Points */}
@@ -312,7 +306,7 @@ export function Contact() {
                       </span>
                     ))}
                   </div>
-                  <div className="mt-1.5 font-editorial text-[12px] leading-none text-graphite/60">
+                  <div className="mt-1.5 font-editorial text-[15px] leading-none text-graphite/60">
                     {caption}
                   </div>
                 </div>
@@ -332,16 +326,12 @@ export function Contact() {
               <div className="hidden h-5 w-px bg-black/15 sm:block" />
               <div className="flex items-center gap-3">
                 <PhoneIcon className="size-5 text-vermilion" />
-                <Detail href={`tel:+91${PHONE.replace(/\s/g, "")}`}>
-                  {PHONE}
-                </Detail>
+                <Detail href={`tel:+91${PHONE.replace(/\s/g, "")}`}>{PHONE}</Detail>
               </div>
             </div>
             <div className="flex items-center gap-3 mt-1 text-black/80">
               <MapPinIcon className="size-5 shrink-0 text-vermilion" />
-              <span>
-                127 Road N, GIDC Waghodia, Vadodara, Gujarat 391760, India
-              </span>
+              <span>127 Road N, GIDC Waghodia, Vadodara, Gujarat 391760, India</span>
             </div>
           </address>
         </Reveal>
